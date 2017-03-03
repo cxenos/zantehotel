@@ -70,9 +70,8 @@ function checkCookie() {
 	setCookie("visitor", exp, 60);
 	}
 	
-	else if (user != "") {
-        window.location.replace("https://google.com");
-		}
+	//else if (user != "") {
+       // window.location.replace("https://google.com"); }
 	else {
       var n = (d2.getTime() + (days*24*60*60*1000)) ;
            setCookie("visitor", n, 60);
