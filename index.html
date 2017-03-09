@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Welcome Visitor</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLE CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />    
+    <!-- GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+	
+	<script>
+
+//code By ChrisXenos For Lisi Pliroforiki
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function getCookiex(ccvalue)
+  {
+    var re = new RegExp(ccvalue + "=([^;]+)");
+    var value = re.exec(document.cookie);
+    return (value != null) ? unescape(value[1]) : null;
+  }
+
+  
+function checkCookie() {
+    var user = getCookie("visitor");
+	var data = getCookiex("visitor");
+	var days = 3;
+	var d2 = new Date();
+	var dnow = d2.getTime();
+	//alert("Cookie data is " + data);
+	
+	
+	
+	if (data <= dnow && data != null){
+	window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSfFYYfasyNgEm6crJx98KOLhmai-4A7_G2YAWwjg2nMeLyEIw/viewform");
+	var exp
+	exp = null;
+	setCookie("visitor", exp, 60);
+	}
+	
+	else if (user != "") {
+        window.location.replace("https://google.com");
+		}
+	else {
+      var n = (d2.getTime() + (days*24*60*60*1000)) ;
+           setCookie("visitor", n, 60);
+       
+    }
+	
+	
+}
+
+</script>
+
+</head>
+<body onload="checkCookie()">
+    
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><font color=white>  Zante Hotel </font>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+           
+        </div>
+    </div>
+   <!--/.NAVBAR END-->
+        
+       <section id="home" class="text-center">
+         
+                <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+
+                            <img src="assets/img/1.jpg" alt="" />
+                            <div class="carousel-caption" >
+                                <h4 class="back-light">Enjoy your Stay in the most beautiful Island of the Ionian Sea </h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/img/2.jpg" alt="" />
+                            <div class="carousel-caption ">
+                                <h4 class="back-light">Have an awesome cocktail in our relaxing pool bar and chill with your friends.</h4>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="assets/img/3.jpg" alt="" />
+                            <div class="carousel-caption ">
+                                <h4 class="back-light">Best food quality and a huge buffet for every taste is wating for you in our new restaurant.</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example" data-slide-to="1"></li>
+                        <li data-target="#carousel-example" data-slide-to="2"></li>
+                    </ol>
+                </div>
+           
+       </section>
+    <!--/.SLIDESHOW END-->
+
+
+        <section id="intro">
+            <div class="container">
+           <div class="row text-center" >
+            <div class="col-md-12">
+             
+                 <div class="row text-center pad-row  ">
+<div class="col-md-4 col-sm-4 ">
+                        <img class="img-circle" src="assets/img/team1.png" alt="" />
+                           <h3><strong>John Paraponiakias</strong> </h3>
+                       <p>
+                                Do you have any complains? contact John to help you out as much as it gets.
+                            </p>
+                            <a href="#" class="btn btn-primary" >Call John</a>
+                    </div>
+                     <div class="col-md-4 col-sm-4 ">
+                        <img class="img-circle" src="assets/img/team2.jpg" alt="" />
+                           <h3><strong>Tina Caller</strong> </h3>
+                       <p>
+                                Tina is a tourist speciallist, you can contact her for anything you need to know.
+                            </p>
+                            <a href="#" class="btn btn-primary" >Call Tina</a>
+                    </div>
+                     <div class="col-md-4 col-sm-4" >
+                         <div class="alert alert-success">
+                           <div class="skill-name">CLIENT SATISFACTION 100%</div> 
+                            <div class="progress progress-striped active progress-adjust">
+  <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+    <span class="sr-only">100% Complete</span>
+  </div>
+</div>
+                        </div>
+                         <div class="alert alert-danger">
+                           <div class="skill-name">HOSPITALITY SERVICES 100%</div> 
+                            <div class="progress progress-striped active progress-adjust">
+  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+    <span class="sr-only">100% Complete</span>
+  </div>
+</div>
+                        </div>
+                         <div class="alert alert-info">
+                           <div class="skill-name">WiFi SATISFACTION 100%</div> 
+                            <div class="progress progress-striped active progress-adjust">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+    <span class="sr-only">100% Complete</span>
+  </div>
+</div>
+                        </div>
+                     </div>
+                      
+                 </div>
+                
+            </div>
+               
+               </div>
+        </div>
+        </section>
+
+    <!--/.INTRO END-->
+      <section id="offer"  >
+           <div class="container">
+           <div class="row   alert alert-info" >
+                 <div class="col-md-8 col-sm-8">
+                      <h1>  Download Deatils Now For Latest Offers</h1>
+                 </div>
+                 <div class="col-md-4 col-sm-4" style="padding-top: 15px;">
+                     <a href="#" class=" btn btn-primary btn-lg">GRAB IT HERE NOW</a> 
+                 </div>
+                          
+               </div>
+               </div>
+      </section>
+      <!--/.OFFFER END-->
+         <section id="just-intro">
+             <div class="container">
+             <div class="row text-center pad-row">
+            <div class="col-md-4  col-sm-4">
+                 <i class="fa fa-desktop fa-5x"></i>
+                            <h4> <strong>Sure Quique Menu</strong> </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                       <a href="#" class="btn btn-primary" >Read Details</a>    
+                </div>
+             <div class="col-md-4  col-sm-4">
+                 <i class="fa fa-flask  fa-5x"></i>
+                            <h4> <strong>Sure Quique Menu</strong> </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                           <a href="#" class="btn btn-primary" >Read Details</a>
+                </div>
+            <div class="col-md-4  col-sm-4">
+                  <i class="fa fa-pencil  fa-5x"></i>
+                            <h4> <strong>Sure Quique Menu</strong> </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                       <a href="#" class="btn btn-primary" >Read Details</a>    
+                </div>
+                    
+            </div>
+                 </div>
+         </section>
+     <!--/.JUST-INTRO END-->
+     <section  class="note-sec" >
+         
+               <div class="container">
+           <div class="row text-center pad-row" >
+            <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 ">
+                <i class="fa fa-quote-left fa-3x"></i>
+               <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                            </p>
+                </div>
+               </div>
+            </div>   
+           
+       </section>
+    <!--/.NOTE END-->
+     <section id="clients"  >
+        
+                
+            <div class="container">
+           <div class="row text-center pad-bottom" >
+            <div class="col-md-12">
+                <img src="assets/img/clients.png" alt="" class="img-responsive" />
+            </div>
+               
+               </div>
+        </div>
+        </section>
+     <!--/.CLIENTS END-->
+    <section id="footer-sec" >
+             
+            <div class="container">
+           <div class="row  pad-bottom" >
+            <div class="col-md-4">
+                <h4> <strong>ABOUT COMPANY</strong> </h4>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                         Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                <a href="#" >read more</a>
+                </div>
+               <div class="col-md-4">
+                    <h4> <strong>SOCIAL LINKS</strong> </h4>
+                   <p>
+                     <a href="#"><i class="fa fa-facebook-square fa-3x"  ></i></a>  
+                        <a href="#"><i class="fa fa-twitter-square fa-3x"  ></i></a>  
+                        <a href="#"><i class="fa fa-linkedin-square fa-3x"  ></i></a>  
+                       <a href="#"><i class="fa fa-google-plus-square fa-3x"  ></i></a>  
+                   </p>
+                </div>
+               <div class="col-md-4">
+                   <h4> <strong>OUR LOCATION</strong> </h4>
+                            <p>
+                               234/JK , The Wondre Land, <br />
+                               Newyork Street Junction  <br />
+                               JUST USA -10909094
+                            </p>
+                    <a href="#" class="btn btn-primary" >SEND QUERY</a>
+                </div>
+               </div>
+            </div>
+    </section>         
+    <!--/.FOOTER END-->
+    <!-- JAVASCRIPT FILES PLACED AT THE BOTTOM TO REDUCE THE LOADING TIME  -->
+    <!-- CORE JQUERY  -->
+    <script src="assets/plugins/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/plugins/bootstrap.js"></script>
+  <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
