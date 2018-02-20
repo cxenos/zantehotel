@@ -36,7 +36,9 @@ setCookie("visitor", exp, 60);
 }	
 		
 function presslater() {	
-var n = (d2.getTime() + (24*60*60*1000)) ;
+	var nextday;
+	nextday = 1;
+var n = (d2.getTime() + (nextday*24*60*60*1000)) ;
     setCookie("visitor", n, 60);
 }		
 		
