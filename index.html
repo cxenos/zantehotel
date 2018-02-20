@@ -53,7 +53,6 @@ function getCookiex(ccvalue)
 
   
 function checkCookie() {
-        //var user = getCookie("visitor");
 	var data = getCookiex("visitor");
 	var days = 3;
 	var d2 = new Date();
@@ -63,14 +62,9 @@ function checkCookie() {
 	
 	
 	if (data <= dnow && data != null){
-	window.location.replace("https://docs.google.com/forms/d/e/1FAIpQLSfFYYfasyNgEm6crJx98KOLhmai-4A7_G2YAWwjg2nMeLyEIw/viewform");
-	var exp
-	exp = null;
-	setCookie("visitor", exp, 60);
+	window.location.replace("https://cxenos.github.io/zantehotel/survnow.html");
 	}
 	
-	//else if (user != "") {
-        //window.location.replace("https://google.com");  }
 	else {
       var n = (d2.getTime() + (days*24*60*60*1000)) ;
            setCookie("visitor", n, 60);
