@@ -29,16 +29,24 @@ function setCookie(cname,cvalue,exdays) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function pressyes() {
+	var exp;
+	exp = null;
+setCookie("visitor", exp, 60);
+}	
+		
+function presslater() {	
+var n = (d2.getTime() + (24*60*60*1000)) ;
+    setCookie("visitor", n, 60);
+}		
+		
 </script>
 </head>
 <body>
 
 do the survey now? 
-<br> yes <br>
-
-//var exp
-	//exp = null;
-	//setCookie("visitor", exp, 60);
+<br> <button onclick="pressyes()"> YES </button>
+<br> <button onclick="presslater()"> Later </button>
 
 </body>
 </html>
